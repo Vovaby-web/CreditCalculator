@@ -12,9 +12,10 @@ body {
     /* Расположение элементов по вертикали внутри контейнера */
     flex-direction: column; /* или row */
     align-items: flex-start; /* Центрируем по вертикали сверху */
-    min-width: 1000px;   /*Минимальная длина окна*/
+    min-width: 1000px; /*Минимальная длина окна*/
     min-height: 800px; /*Минимальная высота окна*/
 }
+
 h1 {
     /* margin: auto; /* Центрирует элемент по вертикали и горизонтали */
     /* Выравниваем по ширине */
@@ -28,15 +29,17 @@ h1 {
        rgba(0, 0, 0, 0.5) — это цвет тени с полупрозрачностью.   */
     text-shadow: 0px 2px 15px rgba(0, 0, 0, 1);
 }
+
 .container {
     display: flex; /* Схема расположения элементов */
-    gap: 5px;  /* расстояние между элементами */
+    gap: 5px; /* расстояние между элементами */
     margin-left: auto;
     margin-right: auto;
     /* Расположение элементов по горизонтали внутри контейнера */
     flex-direction: row;
     align-items: flex-start; /* Центрируем по вертикали сверху */
 }
+
 .sourcedata {
     width: 400px;
     height: 350px;
@@ -48,6 +51,7 @@ h1 {
     border-radius: 8px; /* Закругленные углы */
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Тень для формы */
 }
+
 .resultdata {
     width: 400px;
     height: 350px;
@@ -58,7 +62,9 @@ h1 {
     padding: 20px; /* Отступы для формы */
     border-radius: 8px; /* Закругленные углы */
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Тень для формы */
-}
-.resultdata {
     display: none; /* Скрываем .resultdata по умолчанию */
+}
+
+.show {
+    display: block; /* Указываем что элемент будет отображаться */
 }

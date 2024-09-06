@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <meta name="author" content="Bychkovski Vladimir">
@@ -12,20 +12,15 @@
     <div class="sourcedata">
         <form action="/" method="post">
             <p>Hello</p>
-            <button type="button" id="calculateButton">"Рассчет"</button>
+            <button type="button" id="calculateButton">"Расчет кредита"</button>
         </form>
     </div>
-    <div class="resultdata">
-        <form action="/" method="post">
+    <div class="resultdata" th:classappend="${showPressure} ? 'show'">
+        <form action="/result" method="post">
             <p>Result</p>
-            <button type="submit">"Экспорт в excel"</button>
+            <button type="button">"Экспорт в excel"</button>
         </form>
     </div>
 </div>
-<script>
-    document.getElementById('calculateButton').addEventListener('click', function () {
-        document.querySelector('.resultdata').style.display = 'block'; // Показываем .resultdata
-    });
-</script>
 </body>
 </html>
