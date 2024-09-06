@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Bychkovski Vladimir">
+    <title>Сalculations</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<h1>Калькулятор кредита</h1>
+<div class="container">
+    <div class="sourcedata">
+        <form action="/" method="post">
+            <p>Hello</p>
+            <button type="button" id="calculateButton">"Рассчет"</button>
+        </form>
+    </div>
+    <div class="resultdata">
+        <form action="/" method="post">
+            <p>Result</p>
+            <button type="submit">"Экспорт в excel"</button>
+        </form>
+    </div>
+</div>
+<script>
+    document.getElementById('calculateButton').addEventListener('click', function () {
+        document.querySelector('.resultdata').style.display = 'block'; // Показываем .resultdata
+    });
+</script>
+</body>
+</html>
