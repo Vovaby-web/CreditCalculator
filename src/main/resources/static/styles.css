@@ -1,70 +1,138 @@
+html, body {
+	height: 100%; /* Убедитесь, что html и body занимают 100% высоты */
+	margin: 0; /* Убираем отступы */
+	padding: 0; /* Убираем внутренние отступы */
+}
 body {
-    display: flex; /* Схема расположения элементов */
-    margin: 0; /* Убираем отступы */
-    padding: 0; /* Убираем внутренние отступы */
-    height: 100%; /* Высота 100% от высоты окна */
-    width: 100%; /* Ширина 100% от ширина окна */
-    background-image: url('images/finansi.jpg');
-    background-size: cover; /* Растягиваем изображение, чтобы заполнить фон */
-    background-repeat: no-repeat; /* Не повторяем изображение */
-    background-position: center; /* Центрируем изображение */
-    /* Как располагать элементы */
-    /* Расположение элементов по вертикали внутри контейнера */
-    flex-direction: column; /* или row */
-    align-items: flex-start; /* Центрируем по вертикали сверху */
-    min-width: 1000px; /*Минимальная длина окна*/
-    min-height: 800px; /*Минимальная высота окна*/
+	margin: 0; /* Убираем отступы */
+	padding: 0; /* Убираем внутренние отступы */
+	width: 100%; /* Ширина 100% от ширина окна */
+	height: 100%; /* Высота 100% от высоты окна */
+	background-image: url('images/finansi.jpg');
+	background-size: cover; /* Растягиваем изображение, чтобы заполнить фон */
+	background-repeat: no-repeat; /* Не повторяем изображение */
+	background-position: center; /* Центрируем изображение */
+	/* Как располагать элементы */
+	/* Расположение элементов по вертикали внутри контейнера */
+	flex-direction: column; /* или row */
+	align-items: flex-start; /* Центрируем по вертикали сверху */
+	min-width: 1000px; /*Минимальная длина окна*/
+	min-height: 800px; /*Минимальная высота окна*/
+	display: flex; /* Схема расположения элементов */
 }
-
 h1 {
-    /* margin: auto; /* Центрирует элемент по вертикали и горизонтали */
-    /* Выравниваем по ширине */
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 20px; /* Отступ сверху */
-    font-size: 40px;
-    color: white;
-    /* Тень текста */
-    /* 2px 2px — это смещение тени по оси X и Y соответственно. 5px — это размер тени.
-       rgba(0, 0, 0, 0.5) — это цвет тени с полупрозрачностью.   */
-    text-shadow: 0px 2px 15px rgba(0, 0, 0, 1);
+	/* margin: auto; /* Центрирует элемент по вертикали и горизонтали */
+	/* Выравниваем по ширине */
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 20px; /* Отступ сверху */
+	font-size: 45px;
+	color: wheat;
+	/* Тень текста */
+	/* 2px 2px — это смещение тени по оси X и Y соответственно. 5px — это размер тени.
+			 rgba(0, 0, 0, 0.5) — это цвет тени с полупрозрачностью.   */
+	text-shadow: 0px 2px 2px rgba(0, 0, 0, 1);
+	font-family: "SeroPro", sans-serif;
 }
-
+/* Контейнер для двух блоков */
 .container {
-    display: flex; /* Схема расположения элементов */
-    gap: 5px; /* расстояние между элементами */
-    margin-left: auto;
-    margin-right: auto;
-    /* Расположение элементов по горизонтали внутри контейнера */
-    flex-direction: row;
-    align-items: flex-start; /* Центрируем по вертикали сверху */
+	font-family: "SeroPro", sans-serif;
+	font-size: 16px;
+	display: flex; /* Схема расположения элементов */
+	gap: 5px; /* расстояние между элементами */
+	margin-left: auto;
+	margin-right: auto;
+	/* Расположение элементов по горизонтали внутри контейнера */
+	flex-direction: row;
+	align-items: flex-start; /* Центрируем по вертикали сверху */
 }
-
+/* Блок исходных данных */
 .sourcedata {
-    width: 400px;
-    height: 350px;
-    margin-top: 20px;
-    min-height: 300px;
-    min-width: 300px;
-    background-color: rgba(255, 255, 255, 0.8); /* Фоновый цвет формы с прозрачностью */
-    padding: 20px; /* Отступы для формы */
-    border-radius: 8px; /* Закругленные углы */
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Тень для формы */
+	width: 380px;
+	height: auto;
+	min-width: 370px;
+	min-height: 170px;
+	margin-top: 20px;
+	background-color: rgba(239, 246, 249, 0.8); /* Фоновый цвет формы с прозрачностью */
+	padding: 20px; /* Отступы для формы */
+	border-radius: 8px; /* Закругленные углы */
+	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5); /* Тень для формы */
+	gap: 20px; /* Отступы между элементами */
 }
-
+/* Блок Результатов */
 .resultdata {
-    width: 400px;
-    height: 350px;
-    margin-top: 20px;
-    min-height: 300px;
-    min-width: 300px;
-    background-color: rgba(255, 255, 255, 0.8); /* Фоновый цвет формы с прозрачностью */
-    padding: 20px; /* Отступы для формы */
-    border-radius: 8px; /* Закругленные углы */
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Тень для формы */
-    display: none; /* Скрываем .resultdata по умолчанию */
+	width: 600px;
+	height: auto;
+	margin-top: 20px;
+	min-height: auto;
+	min-width: 300px;
+	background-color: rgba(239, 246, 249, 0.8); /* Фоновый цвет формы с прозрачностью */
+	padding: 20px; /* Отступы для формы */
+	border-radius: 8px; /* Закругленные углы */
+	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5); /* Тень для формы */
+	display: none; /* Скрываем .resultdata по умолчанию */
+	gap: 10px; /* Отступы между элементами */
+}
+.show {
+	display: block; /* Указываем что элемент будет отображаться */
+}
+/* Для обозначения данных ввода и вывода */
+.label-spacing {
+	font-size: 17px;
+	padding: 5px; /* внутренний отступ для абзаца */
+	text-indent: 20px; /* отступ первой строки */
+	line-height: 2; /* межстрочный интервал */
+	/* letter-spacing: 0.5px;   /* расстояние между символами */
+	color: rgb(0, 0, 0);
+	text-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2); /* Тень для текста */
+}
+button {
+	width: 180px;
+	height: 30px;
+	font-family: "SeroPro", sans-serif;
+	font-size: 18px;
+	background-color: rgb(17, 191, 106);
+	color: white;
+	border-radius: 4px; /* Закругленные углы */
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Тень для формы */
+	border: none; /* Убираем обводную рамку */
+	outline: none; /* Убираем обводную рамку при фокусе */
+}
+/* Блок для сообщений */
+.message-block {
+	width: 90%; /* Установите желаемую ширину */
+	position: relative;
+	color: rgb(255, 0, 0);
+	/* text-shadow: 1px 1px 1px black; /* Тень для текста */
+	font-size: 18px
+}
+/* Стиль ввода исходных данных */
+.input-short{
+	font-family: "SeroPro", sans-serif;
+	font-size: 16px;
+}
+/* Окно прокрутки */
+.scrollable-table {
+	width: 100%; /* Ширина таблицы */
+	max-height: 700px;
+	overflow-y: auto; /* Вертикальная прокрутка */
+	border: 1px solid black; /* Рамка вокруг окна прокрутки */
+	background-color: rgba(239, 246, 249, 0.8); /* Фоновый цвет формы с прозрачностью */
+}
+/* Рисуем таблицу */
+table {
+	width: 100%;
+	border-collapse: collapse; /* Сливаем границы ячеек */
+}
+th, td {
+	border: 1px solid black; /* Черная обводка */
+	padding: 8px;            /* Отступы внутри ячеек для лучшего отображения */
+	text-align: center;      /* Центрируем текст */
+}
+th {
+	background-color: #f2f2f2;
+	font-family: "SeroPro", sans-serif;
+	font-size: 16px;
+	font-weight: normal; /* Убираем жирный шрифт */
 }
 
-.show {
-    display: block; /* Указываем что элемент будет отображаться */
-}
