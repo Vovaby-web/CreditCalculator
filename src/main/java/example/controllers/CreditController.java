@@ -1,5 +1,6 @@
 package example.controllers;
 import example.models.SourceData;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -28,9 +29,8 @@ public class CreditController {
     model.addAttribute("source", sourceData);
     return "main";
   }
-  @PostMapping("/result")
-  public String setResult(Model model) {
-    model.addAttribute("source", creditService.getSourceData());
-    return "main";
+  @PostMapping("/export")
+  public ResponseEntity<byte[]> exportData() {
+    return creditService.exportXls();
   }
 }

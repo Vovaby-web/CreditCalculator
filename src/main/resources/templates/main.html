@@ -52,13 +52,13 @@
           <td th:text="${payment.getMonthlyContribution()}"></td>
           <td th:text="${payment.getPrincipalRepayment()}"></td>
           <td th:text="${payment.getInterestPayment()}"></td>
-          <td th:text="${payment.getRemainingBalanceStr()}"></td>
+          <td th:text="${payment.getRemainingBalance()}"></td>
         </tr>
         </tbody>
       </table>
     </div>
     <br>
-    <form action="/result" method="post">
+    <form action="/export" method="post">
       <button type="submit">"Экспорт в xls"</button>
     </form>
   </div>
