@@ -21,6 +21,7 @@ public class CreditController {
   }
   @PostMapping("/")
   public String setCredit(@ModelAttribute SourceData sourceData, Model model) {
+    creditService.payNull();
     creditService.setSource(sourceData);
     if (creditService.exam(sourceData)) {
       model.addAttribute("payments", creditService.resultData());

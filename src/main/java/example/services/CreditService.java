@@ -6,13 +6,11 @@ import org.apache.poi.ss.usermodel.*;
 import org.apache.poi.ss.util.CellRangeAddress;
 import org.apache.poi.xssf.usermodel.XSSFColor;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
-import org.openxmlformats.schemas.drawingml.x2006.main.CTColor;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
-import org.springframework.web.context.annotation.RequestScope;
 import org.springframework.web.context.annotation.SessionScope;
 
 import java.io.IOException;
@@ -30,6 +28,9 @@ public class CreditService {
   private List<Payment> pay;
   public CreditService(SourceData sourceData) {
     this.sourceData = sourceData;
+    payNull();
+  }
+  public void payNull(){
     pay = new ArrayList<>();
   }
   public boolean exam(SourceData sourceData) {
@@ -194,7 +195,6 @@ public class CreditService {
     style.setAlignment(HorizontalAlignment.CENTER);
     // Выравнивание по вертикали (по центру)
     style.setVerticalAlignment(VerticalAlignment.CENTER);
-
     // Установка цвета фона
     // Белый цвет
     Color rgb = new Color(255, 255, 255);
